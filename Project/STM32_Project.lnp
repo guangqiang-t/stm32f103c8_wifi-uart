@@ -1,0 +1,16 @@
+--cpu Cortex-M3
+".\startup_stm32f10x_md.o"
+".\core_cm3.o"
+".\system_stm32f10x.o"
+".\misc.o"
+".\stm32f10x_gpio.o"
+".\stm32f10x_rcc.o"
+".\stm32f10x_usart.o"
+".\usart123.o"
+".\main.o"
+".\delay.o"
+".\led.o"
+--strict --scatter ".\STM32_Project.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\STM32_Project.map" -o .\STM32_Project.axf
